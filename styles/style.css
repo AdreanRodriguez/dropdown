@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BASE */
+
+.wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+.page {
+    background-color: cadetblue;
+    height: 100vh;
+}
+
+/* Menu */
+nav {
+    background-color: rgba(203, 203, 146);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+.menu-item {
+    list-style-type: none;
+    padding: 1.5rem 2.5rem;
+    max-width: 130px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-item:hover {
+    background-color: rgb(116, 116, 79);
+}
+
+.dropdown {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    background-color: rgba(203, 203, 146);
+    top: 4.1rem;
+    display: none;
+    transform: translateY(-.7rem);
+    transition: all .7s ease-in-out;
+}
+
+.dropdown-parent:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
